@@ -5,6 +5,7 @@ public class MainTraffic {
         Scanner scanner = new Scanner(System.in);
         String turnOnTraffocLight = scanner.next();
         // HUI
+        // Pizda
         TrafficLight switchButton = new TrafficLight();
         switchButton.lightsSwitch(turnOnTraffocLight);
     }
