@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class CarBase {
 
-    private Map<String, String> cars = new HashMap<>();
+    private Map<String, Car> cars = new HashMap<>();
 
-    public void carAdd(String carNumber, String carName) {
-        cars.put(carNumber, carName);
+    public void carAdd(Car car) {
+        cars.put(car.getNumber(), car);
         System.out.println(cars);
 
     }
