@@ -3,6 +3,7 @@ public class Car {
     private Integer fine;
     private String number;
     private String model;
+    // HUI
 
     public Car(Integer fine, String number, String model) {
         if(number == null || number.length() != 6){
