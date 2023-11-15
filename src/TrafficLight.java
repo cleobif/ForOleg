@@ -10,11 +10,11 @@ public class TrafficLight {
                 System.out.println("First - " + firstSignal);
                 secondSignal = lights[2 - i];
                 System.out.println("Second - " + secondSignal);
-                Thread.sleep(1000);
+                Thread.sleep(10000);
                 if(i == 2){
                     System.out.println("First - " + lights[1]);
                     System.out.println("Second - " + lights[1]);
-                    Thread.sleep(1000);
+                    Thread.sleep(10000);
                 }
             }
         }

@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class CarBase {
 
-    private Map<String, Car> cars = new HashMap<>();
+    public Map<String, Car> cars = new HashMap<>();
 
     public void carAdd(Car car) {
         cars.put(car.getNumber(), car);
