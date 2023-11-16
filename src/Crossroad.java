@@ -9,17 +9,19 @@ public class Crossroad {
 
     private CarBase carBase;
 
-    public void carAddToRoad(){
+    public void carAddToRoad() {
         carBase = new CarBase();
     }
 
 
-    public void carAddToRheRoad(String command){
+    public void carAddToRheRoad(String command) {
         String[] roadCommand = command.split("/");
-        if(roadCommand[0].equals("put")){
-        leftRoad.add(carBase.cars.get(roadCommand[1]));
+        if (roadCommand[0].equals("put") && roadCommand[2].equals("leftRoad")) {
+            leftRoad.add(carBase.cars.get(roadCommand[1]));
             System.out.println(leftRoad);
-            //
+        }
+        else if(roadCommand[0].equals("delete")){
+
         }
 
     }
