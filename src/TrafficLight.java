@@ -1,21 +1,18 @@
+import java.util.ArrayList;
+
 public class TrafficLight {
-    String[] lights = new String[]{"Red", "Yellow", "Green"};
-    String firstSignal;
-    String secondSignal;
+    String[] lights = new String[]{"Red", "Yellow", "Green", "Yellow", "Red", "Yellow", "Green"};
+    ArrayList<String> array = new ArrayList<>();
 
     public void lightsSwitch(String button) throws InterruptedException {
+        ArrayList<String> arr = new ArrayList<>();
         while (button.equals("go")) {
-            for (int i = 0; i < 3; i++) {
-                firstSignal = lights[i];
-                System.out.println("First - " + firstSignal);
-                secondSignal = lights[2 - i];
-                System.out.println("Second - " + secondSignal);
-                Thread.sleep(10000);
-                if(i == 2){
-                    System.out.println("First - " + lights[1]);
-                    System.out.println("Second - " + lights[1]);
-                    Thread.sleep(10000);
-                }
+            for (int i = 0; i < 7; i++) {
+                arr.clear();
+                arr.add(lights[i]);
+                arr.add(lights[6 - i]);
+                System.out.println(arr);
+                Thread.sleep(1000);
             }
         }
     }

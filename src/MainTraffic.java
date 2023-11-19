@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MainTraffic {
@@ -6,6 +7,9 @@ public class MainTraffic {
         String turnOnTrafficLight = scanner.next();
         TrafficLight switchButton = new TrafficLight();
         switchButton.lightsSwitch(turnOnTrafficLight);
+
     }
 }
+
+
 
