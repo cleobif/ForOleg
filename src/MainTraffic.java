@@ -7,6 +7,7 @@ public class MainTraffic {
         String turnOnTrafficLight = scanner.next();
         TrafficLight switchButton = new TrafficLight();
         switchButton.lightsSwitch(turnOnTrafficLight);
+        switchButton.currentLight();
 
     }
 }
