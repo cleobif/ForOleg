@@ -1,21 +1,26 @@
-import java.util.ArrayList;
-
 public class TrafficLight {
-    private String[] lights = new String[]{"Red", "Yellow", "Green", "Yellow", "Red", "Yellow", "Green"};
-    ArrayList<String> array = new ArrayList<>();
+    private final String[] lights = new String[]{"Red", "Yellow", "Green"};
 
-    public void lightsSwitch(String button) throws InterruptedException {
-        while (button.equals("go")) {
-            for (int i = 0; i < 7; i++) {
-                array.clear();
-                array.add(lights[i]);
-                array.add(lights[6 - i]);
-                Thread.sleep(1000);
-            }
-        }
-    }
-    public void currentLight(){
-            System.out.println(array);
-        }
+    private Integer currentIndex;
+    private Integer direction;
+
+    public TrafficLight(Integer startIndex, Integer direction) {
+        this.direction = direction;
+        currentIndex = startIndex;
     }
 
+    public void switchLight() {
+        currentIndex = (currentIndex + direction) % lights.length;
+        if(currentIndex == 2 || currentIndex == 0){
+            direction *= -1;
+        }
+    }
+
+    public String getCurrentLight() {
+        return lights[currentIndex];
+    }
+}
+
+// члены класса какие бывают(поля, методы, конструкторы. гетеры сетеры, константы)
+// модификаторы доступа
+// области действия
